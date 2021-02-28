@@ -6,11 +6,33 @@ $sm: 28em;    // mobile and low-res tablets
 $xs: 20em;    // mobile only
 
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=DotGothic16&family=Roboto:wght@100;400&family=Shippori+Mincho&display=swap');
+@import url('https://fonts$googleapis$com/css2?family=Akaya+Telivigala&family=DotGothic16&family=Roboto:wght@100;400&family=Shippori+Mincho&display=swap');
 
 /* Colors */
 $white: #FCFCFC;
 $black: #000000;
 
-$secondary: #67b486;
+$secondary: #73c292;
 $tertiary: #5ae291;
+
+/* Types */
+$fire: #d32213;
+$normal: #b5b8b1;
+$fighting: #e0a155;
+$flying: #d3d8cc;
+$poison: #b97fc9;
+$ground: #ab9842;
+$rock: #967e15; 
+$bug: #729f3f; 
+$ghost: #7b62a3; 
+$steel: #9eb7b8; 
+$water: #4592c4; 
+$grass: #00722e; 
+$electric: #eed535;
+$psychic: #f366b9;
+$ice: #51c4e7;
+$dragon: #f16e57;
+$dark: #707070; 
+$fairy: #fdb9e9;
+$unknown: #fcfcfc;
+$shadow: #707070;

@@ -1,0 +1,33 @@
+.paginator {
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 2em;
+        margin: 0 1em;
+    }
+
+    .left {
+        transform: rotate(-90deg);
+    }
+
+    .right {
+        transform: rotate(90deg);
+    }
+
+    .page {
+        border-radius: 50%;
+        border: 2px solid $tertiary;
+        background-color: $secondary;
+        margin: 0 0.25em;
+        width: 1.5em;
+        height: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

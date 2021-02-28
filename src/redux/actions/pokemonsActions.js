@@ -19,3 +19,16 @@ export const startLoadPokemonAction = (offset, limit=10) => {
         dispatch(loadPokemonAction(data));
     })
 }
+
+export const setPokemonAction = (pokemon) => {
+    return ({
+        type: POKEMONS.SET_POKEMON,
+        payload: pokemon
+    })
+}
+
+export const removePokemonAction = () => {
+    return ({
+        type: POKEMONS.REMOVE_POKEMON
+    })
+}

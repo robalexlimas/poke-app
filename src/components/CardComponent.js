@@ -1,23 +1,25 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { setPokemonAction } from '../redux/actions/pokemonsActions';
+import { showModalAction } from '../redux/actions/uiActions';
+import { TypeComponent } from './TypesComponent';
 
-export const CardComponent = ({ name, url, id, types }) => {
+export const CardComponent = ( props ) => {
+    const { name, url, id } = props;
+    const dispatch = useDispatch();
+
+    const clickHandle = () => {
+        dispatch(setPokemonAction(props));
+        dispatch(showModalAction());
+    }
+
+    
     return (
-        <div className="card-item pointer">
-            <img src={ url } alt={ name } />
+        <div className="card-item pointer" onClick={ clickHandle }>
+            <img src={ url[0] } alt={ name } />
             <span>N. { id }</span>
             <h3>{ name.toUpperCase() }</h3>
-            <div>
-                {
-                    types.map(({slot, type }) => (
-                        <p 
-                            className="types"
-                            key={ slot }
-                        >
-                            { type.name }
-                        </p>
-                    ))
-                }
-            </div>
+            <TypeComponent { ...props } />
         </div>
     )
 }

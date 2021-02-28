@@ -12,9 +12,14 @@ export const getPokemon = async (pokemon) => {
         id: data.id,
         name: data.name,
         moves: data.moves,
-        url: data.sprites.front_default,
+        url: [
+            data.sprites.front_default,
+            data.sprites.other?.dream_world.front_default,
+        ],
         height: data.height,
+        weight: data.weight,
         types: data.types,
+        stats: data.stats
     };
 }
 
