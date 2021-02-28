@@ -1,0 +1,98 @@
+.collapse {
+    background-color: $secondary;
+    display: flex;
+    height: 3em;
+    justify-content: baseline;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    .nav-icon {
+        align-items: center;
+        display: flex;
+        padding: 0.3em;
+        width: 100%;
+
+        @include responsive($med) {
+            width: 25%;
+        }
+
+        img {
+            height: 100%;
+            margin-right: 0.3em;
+        }
+    }
+
+    .nav-router {
+        display: none;
+
+        @include responsive($med) {
+            display: flex;
+            align-items: center;
+            width: 45%;
+        }
+    }
+
+    .nav-router ul{
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        margin: 0;
+        padding: 0.3em 0;
+        width: 100%;
+    }
+
+    .nav-searcher {
+        display: none;
+        
+        @include responsive($med) {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+        }
+
+        form {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            width: 100%;
+
+            input {
+                height: 40%;
+                width: 50%;
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+                height: 100%;
+                padding: 0.5em;
+                width: 50%;
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .dropdown {
+        align-items: center;
+        display: flex;
+        right: 0;
+        height: 100%;
+        padding-right: 1em;
+        position: absolute;
+        top: 0;
+
+        @include responsive($med) {
+            display: none;
+        }
+
+        img {
+            height: 60%;
+        }
+    }
+}

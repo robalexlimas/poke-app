@@ -1,0 +1,42 @@
+.card-items {
+    margin-top: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 3em;
+    row-gap: 3em;
+}
+
+.card-item {
+    border: 1px solid $tertiary;
+    border-radius: 0.5em;
+    text-align: center;
+    height: 10em;
+
+    img {
+        display: block;
+        height: 55%;
+        margin: 0 auto;
+    }
+
+    h3 {
+        margin: 0;
+        height: 10%;
+    }
+
+    span {
+        font-size: 0.7em;
+    }
+
+    div {
+        margin: 0;
+        height: 30%;
+        display: flex;
+        margin: 0;
+        justify-content: center;
+    }
+    .types {
+        text-transform: capitalize;
+        font-size: 0.8em;
+        margin: 0.1em 0.3em;
+    }
+}

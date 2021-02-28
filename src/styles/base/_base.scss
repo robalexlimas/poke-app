@@ -1,5 +1,5 @@
 body {
-    background-color: $white;
+    background: url('../../assets/images/background.png');
     color: $black;
     font-family: 'DotGothic16', sans-serif;
     /*
@@ -7,9 +7,34 @@ body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Shippori Mincho', serif;
     */
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 400;
     line-height: normal;
     letter-spacing: normal;
     width: 100vw;
+
+    @include responsive($med) {
+        font-size: 1.5em;
+    }
+}
+
+.main-container {
+    padding: 3.5em 3em;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.5em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 0.8em;
 }

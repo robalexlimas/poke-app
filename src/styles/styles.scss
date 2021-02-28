@@ -1,10 +1,16 @@
+/* mixins */
+@import './mixins/mixins';
+
 /* Settings */
 @import './base/settings';
 
 /* Base */
 @import './base/base';
-
-/* mixins */
-@import './mixins/mixins';
+@import './base/ui';
 
 /* Components */
+@import './components/NavBarComponent';
+@import './components/FooterComponent';
+@import './components/CardComponent';
+@import './components/CardItemsComponent';
+
