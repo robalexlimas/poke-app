@@ -11,3 +11,15 @@ export const hideModalAction = () => {
         type: UI.HIDE_MODAL
     }
 }
+
+export const showLoadingAction = () => {
+    return {
+        type: UI.SHOW_LOADING
+    }
+}
+
+export const hideLoadingAction = () => {
+    return {
+        type: UI.HIDE_LOADING
+    }
+}

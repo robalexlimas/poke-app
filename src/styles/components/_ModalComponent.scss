@@ -4,9 +4,9 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.5);
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    z-index: 999;  
 
-    
     .item {
         position: absolute;
         top: 50%;
@@ -16,6 +16,7 @@
         border-radius: 0.3em;
         padding: 0;
         width: 30%;
+        height: 20em;
 
         .close {
             height: 30px;
@@ -46,10 +47,16 @@
                 }
             }
 
-            img {
-                width: 40%;
-                display: block;
-                margin: 0 auto;
+            .image{
+                width: 100%;
+                height: 20vh;
+
+                img {
+                    width: 40%;
+                    height: 100%;
+                    display: block;
+                    margin: 0 auto;
+                }
             }
 
             .description {

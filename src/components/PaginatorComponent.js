@@ -1,16 +1,43 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import arrow from '../assets/images/arrow.png';
+import { startLoadPokemonAction } from '../redux/actions/pokemonsActions';
 
 export const PaginatorComponent = () => {
+    const { offset, total } = useSelector(state => state.pokemons);
+    const dispatch = useDispatch();
+
+    const handleChangePrevious = () => {
+        dispatch(startLoadPokemonAction(offset, false, 10, 'previous'));
+    }
+
+    const handleChangeNext = () => {
+        dispatch(startLoadPokemonAction(offset, false, 10, 'next'));
+    }
+
     return (
         <div className="paginator">
-            <img src={ arrow } alt="arrow" className="left pointer" />
-            <div className="page pointer">...</div>
-            <div className="page pointer">5</div>
-            <div className="page pointer">6</div>
-            <div className="page pointer">7</div>
-            <div className="page pointer">...</div>
-            <img src={ arrow } alt="arrow" className="right pointer" />
+            { offset > 0 &&
+                (<img 
+                    src={ arrow }
+                    alt="arrow"
+                    className="left pointer"
+                    onClick={ handleChangePrevious }
+                />)
+            }
+            <div className="page pointer">{ (offset / 10) - 1}</div>
+            <div className="page pointer">{ (offset / 10) }</div>
+            <div className="page pointer">{ (offset / 10) + 1 }</div>
+            <div className="page pointer">{ (offset / 10) + 2 }</div>
+            <div className="page pointer">{ (offset / 10) + 3 }</div>
+            { offset < total &&
+                (<img 
+                    src={ arrow }
+                    alt="arrow"
+                    className="right pointer"
+                    onClick={ handleChangeNext }
+                />)
+            }
         </div>
     )
 }

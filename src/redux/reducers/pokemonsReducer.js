@@ -4,6 +4,7 @@ const initialState = {
     pokemons: [],
     current: {},
     offset: 0,
+    total: 100
 }
 
 export const pokemonsReducer = (state=initialState, action) => {

@@ -2,6 +2,7 @@ import { UI } from '../types/index';
 
 const initialState = {
     modal: false,
+    loading: false,
 };
 
 export const uiReducer = (state=initialState, action) => {
@@ -15,6 +16,16 @@ export const uiReducer = (state=initialState, action) => {
             return {
                 ...state,
                 modal: false
+            }
+        case UI.SHOW_LOADING:
+            return {
+                ...state,
+                loading: true
+            }
+        case UI.HIDE_LOADING:
+            return {
+                ...state,
+                loading: false
             }
         default:
             return state;

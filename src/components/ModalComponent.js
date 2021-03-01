@@ -25,7 +25,9 @@ export const ModalComponent = () => {
                         <span>N. { pokemon.id }</span>
                         <h3>{ pokemon.name.toUpperCase() }</h3>
                     </div>
-                    <img src={ pokemon.url[1] } alt={ pokemon.name } />
+                    <div className="image">
+                        <img src={ pokemon.url[1] } alt={ pokemon.name } />
+                    </div>
                     <div className="description">
                         <TypeComponent { ...pokemon } />
                         <MovesComponent { ...pokemon } />

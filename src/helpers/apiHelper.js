@@ -31,3 +31,14 @@ export const getListPokemons = async (offset=0, limit=10)  => {
     }
     return pokemons;
 }
+
+export const getTotalPokemons = async () => {
+    const url = `${ environment.urlApi }/pokemon/`;
+    const response = await fetch(url, {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'default'
+    });
+    const data = await response.json();
+    return data.count;
+}

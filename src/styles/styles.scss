@@ -8,6 +8,9 @@
 @import './base/base';
 @import './base/ui';
 
+/* Animations */
+@import './animations/Animations';
+
 /* Components */
 @import './components/NavBarComponent';
 @import './components/FooterComponent';
@@ -15,6 +18,7 @@
 @import './components/CardItemsComponent';
 @import './components/ModalComponent';
 @import './components/PaginatorComponent';
+@import './components/LoadingComponent';
 
 /* Types Pokemon */
 @import './components/Types';
